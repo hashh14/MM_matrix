@@ -11,7 +11,7 @@ mismatch_score = -4
 def matrix (s1,s2,i,j):
     if(i==0 or j==0):
         return 0;
-    elif(s1[i]==s2[j]):
+    elif(s1[i-1] == s2[j-1]):
         m[i,j] = matrix(s1,s2,i-1,j-1) + match_score
         return m[i,j]
     else:
